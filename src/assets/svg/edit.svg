@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_21841" data-name="Group 21841" transform="translate(-1208 -230)">
+    <g id="Group_21839" data-name="Group 21839" transform="translate(1216.919 238.108)">
+      <g id="edit-document" transform="translate(0 0)">
+        <g id="Group_82" data-name="Group 82" transform="translate(0 0)">
+          <path id="Path_151" data-name="Path 151" d="M146.013.16l-5.56,5.56a.6.6,0,0,0-.167.389l-.037,2.84a.559.559,0,0,0,.167.407.593.593,0,0,0,.389.185h.009l2.748-.056a.573.573,0,0,0,.389-.185l5.606-5.606a.564.564,0,0,0,0-.786L146.809.16A.575.575,0,0,0,146.013.16Zm-2.7,8.2-1.943.028.028-2.035,2.831-2.831L146.18,5.5ZM146.966,4.7l-1.952-1.98L146.4,1.335,148.363,3.3Z" transform="translate(-136.069 0)" fill="#50a0fc"/>
+          <path id="Path_152" data-name="Path 152" d="M18.289,21.3a.555.555,0,1,0,0-1.11H12.738a.557.557,0,0,0-.555.555V33.417a.557.557,0,0,0,.555.555H23.1a.557.557,0,0,0,.555-.555V28.236a.555.555,0,1,0-1.11,0v4.626H13.293V21.3Z" transform="translate(-12.183 -19.529)" fill="#50a0fc"/>
+        </g>
+      </g>
+    </g>
+    <g id="Ellipse_160" data-name="Ellipse 160" transform="translate(1208 230)" fill="none" stroke="#50a0fc" stroke-width="1">
+      <circle cx="15" cy="15" r="15" stroke="none"/>
+      <circle cx="15" cy="15" r="14.5" fill="none"/>
+    </g>
+  </g>
+</svg>

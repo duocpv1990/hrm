@@ -1,0 +1,64 @@
+<mat-nav-list>
+  <div class="logo">
+    <img src="assets/sidebar/logo.svg" alt="" class="image-logo">
+  </div>
+  <!-- wrap all the nav items in an accordion panel -->
+  <mat-accordion [displayMode]="'flat'">
+    <div *ngFor="let navItem of listRoute; let i = index">
+      <!-- use a simple div for an item that has no children,
+        match up the styling to the expansion panel styles -->
+      <div
+        class="nav-head parent-nav mat-elevation-z0"
+        *ngIf="navItem.child.length === 0"
+        [class.selected]="isActive === i"
+        (click)="isActive = i"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="navItem.path"
+          (click)="closeSidenav()"
+        >
+          <img [src]="navItem.icon" />
+          <span class="nav-link-text">{{ navItem.name }}</span>
+        </a>
+      </div>
+
+      <!-- use expansion panel for heading item with sub page links -->
+      <mat-expansion-panel
+        *ngIf="navItem.child.length > 0"
+        class="mat-elevation-z0 parent-nav"
+      >
+        <mat-expansion-panel-header
+          class="nav-head"
+          (opened)="router.isActive(navItem.path)"
+          [expandedHeight]="'58px'"
+          [class.selected]="isActive === i"
+          (click)="isActive = i"
+        >
+          <mat-panel-title class="nav-link">
+            <img [src]="navItem.icon" />
+            <span class="nav-link-text">{{ navItem.name }}</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="nav-section">
+          <!-- loop through all your sub pages inside the expansion panel content -->
+          <div *ngFor="let navPage of navItem.child" class="nav-item">
+            <img
+              class="hidden-icon"
+              src="assets/sidebar/child-icon.svg"
+              [class.active]="router.isActive(navPage.path)"
+            />
+            <a
+              (click)="isActive = i"
+              class="nav-link"
+              [routerLink]="navPage.path"
+              (click)="closeSidenav()"
+              >{{ navPage.name }}</a
+            >
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </mat-accordion>
+</mat-nav-list>

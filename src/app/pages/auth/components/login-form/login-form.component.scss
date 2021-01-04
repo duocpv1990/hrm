@@ -1,0 +1,51 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
+
+.form {
+  width: 100%;
+  h3 {
+    color: $white;
+  }
+  &__input {
+    margin-top: 20px;
+    width: 20vw;
+    input {
+      width: 100%;
+      padding: 1.2em 0.8em;
+      border: 0.2px solid #e0edfb;
+      border-radius: 10px;
+      font-size: 0.8em;
+      outline-style: none;
+    }
+    .passwordIcon {
+      font-size: 1.1em !important;
+      position: absolute !important;
+      top: 8.2em !important;
+      margin: 0 auto !important;
+      color: var(--ion-color-medium-tint);
+      right: 0em;
+      cursor: pointer;
+    }
+  }
+
+  &__forget {
+    font-size: $fs-xs;
+    font-weight: $fw-lighter;
+    color: $white;
+    display: flex;
+    justify-content: flex-end;
+    width: 109%;
+  }
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.form-actions {
+  display: flex;
+  margin-top: 8%;
+  &__login {
+    margin-right: 10px;
+    color: $blue;
+  }
+}

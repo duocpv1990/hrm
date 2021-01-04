@@ -1,0 +1,120 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
+@import "src/app/styles/variables";
+
+.parent-nav {
+  margin-bottom: 20px;
+  color: $white;
+}
+.nav-head {
+  width: 295px;
+  height: 58px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-size: $fs-normal;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    background: $white-35 !important;
+  }
+  .nav-link {
+    width: 295px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-link,
+.nav-item {
+  img {
+    margin: 0 30px;
+  }
+}
+.nav-item {
+  margin-bottom: 20px;
+  display: flex;
+}
+.nav-section {
+  padding: 25px 0 0px 60px;
+  .nav-item {
+    margin-bottom: 25px;
+    display: flex;
+    .nav-link {
+      font-size: $fs-normal;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      margin-left: -16px;
+      margin-right: 10px;
+    }
+  }
+}
+::ng-deep .mat-content {
+  display: flex !important;
+  flex: unset !important;
+  flex-direction: row;
+  overflow: hidden !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.mat-expansion-panel {
+  background: transparent !important;
+}
+.mat-expansion-panel-header-title {
+  color: $white;
+}
+.mat-expansion-panel-header {
+  padding: 0;
+  span {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  display: none !important;
+}
+
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover {
+}
+
+.active {
+  display: block !important;
+}
+
+.hidden-icon {
+  display: none;
+}
+
+.selected {
+  background: $white-35;
+  &::after {
+    height: 40px;
+    width: 6px;
+    background-color: $white;
+    content: "";
+    position: absolute;
+    left: -15px;
+    border-radius: 10px;
+  }
+}
+::ng-deep .mat-expansion-panel-body {
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+.mat-expansion-panel {
+  padding-bottom: 0;
+  overflow: visible;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}

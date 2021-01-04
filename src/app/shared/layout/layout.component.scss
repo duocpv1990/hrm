@@ -1,0 +1,49 @@
+@import "src/app/styles/variables";
+@import "src/app/styles/colors";
+
+.layout {
+  width: 100%;
+}
+
+.layout-sidebar {
+  z-index: 9 !important;
+  padding: 15px;
+  background: $sidebar-background-color;
+  @media (max-width: $small) {
+    width: 218px;
+  }
+}
+::ng-deep .mat-drawer-inner-container {
+  overflow: visible !important;
+}
+
+.layout-content {
+  height: 100vh;
+  background-color: $background-color;
+  overflow: auto !important;
+  @media (max-width: $small) {
+    width: 100%;
+  }
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, #50a0fc),
+    color-stop(0.86, #032cc1)
+  );
+}

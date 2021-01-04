@@ -1,0 +1,211 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
+@import "src/app/styles/variables";
+.container-pages {
+    background-color: $background-content;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 50px;
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: $white;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 5px;
+        background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        background-image: -webkit-gradient(linear,
+                                        left bottom,
+                                        left top,
+                                        color-stop(0.44, rgb(122,153,217)),
+                                        color-stop(0.72, #50A0FC),
+                                        color-stop(0.86, #032CC1))
+    }
+    .header-pages {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        background-color: $background-content;
+        .header-title {
+            display: flex;
+            margin-left: 45px;
+            .header-title-active {
+                font-size: 20px;
+                font-weight: bold;
+                color: $text-c0lor-blue;
+            }
+            .margin-active {
+                margin: 0 5px;
+            }
+            .header-title-item {
+                font-size: 20px;
+                color: $text-c0lor-blue;
+            }
+        }
+        .header-button {
+            cursor: pointer;
+            outline: none;
+            a {
+                background: $button-background-color;
+                padding: 15px 25px;
+                margin-right: 30px;
+                border-radius: 15px;
+                color: $white;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.buton-save {
+    background: $button-background-color;
+    padding: 15px 35px;
+    margin-right: 15px;
+    border-radius: 15px;
+    color: $white;
+    font-size: 16px;
+    text-decoration: none;
+    width: 140px;
+}
+.buton-cancel {
+    background: $bg-btn-cancel;
+    padding: 15px 25px;
+    margin-right: 30px;
+    border-radius: 15px;
+    color: $white;
+    font-size: 16px;
+    text-decoration: none;
+    width: 140px;
+}
+
+.table-container {
+    margin: 0 30px;
+    .table {
+        background-color: $background-content;
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        white-space: nowrap;
+        border-collapse: separate !important;
+        border-spacing: 0 10px !important;
+        th:first-child {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        th:last-child {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        th:not(:last-child) {
+            border-right: 4px solid white;
+        }
+        th {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: start;
+            height: 49px;
+            background-color: $color-th-table;
+            padding-left: 10px;
+        }
+        tr {
+            border-radius: 10px;
+            background-color: $text-c0lor-white;
+            &:hover {
+                box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+            }
+            &:hover td {
+                background-color: #f9f9f9;
+            }
+            td:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            td {
+                padding-left: 10px;
+                height: 66px;
+                background-color: $white;
+                color: $text-color-grey;
+                font-size: 14px;
+                img {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 15px;
+                }
+            }
+            td:last-child {
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+}
+
+//toggle btn switch
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white-gray;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: $color-input-check;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px $color-input-check;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
